@@ -1,0 +1,35 @@
+
+.loginPage{
+    width: 100%;
+    height: 70vh;
+    display: block;
+}
+.loginPage.hidden{
+    display: none;
+}
+.form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 200px auto;
+}
+.fGroup{
+    width: 500px;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border:1px solid black;
+    text-align: center;
+    outline: none;
+}
+.fbtn{
+    margin-top: 25px;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    border:2px solid rgb(95, 109, 70);
+    background-color: rgb(161, 175, 136);
+    cursor: pointer;
+}

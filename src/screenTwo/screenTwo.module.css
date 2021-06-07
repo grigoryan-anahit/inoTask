@@ -1,0 +1,10 @@
+.screenTwoPage{
+    width: 100%;
+    height: 100vh;
+    background-color: darkseagreen;
+    display: flex;
+}
+.channelDiv{
+    margin-left: 50px;
+    cursor: pointer;
+}
