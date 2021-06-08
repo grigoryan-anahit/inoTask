@@ -26,7 +26,7 @@ class PostForm extends Component{
         if(response.data.error===false){
             this.setState({ screenTwo:true});
            console.log(this.state.screenTwo);
-         <Redirect to="/second" />
+    
          
         }else {
             const err=document.querySelector('.errorText');
@@ -47,7 +47,8 @@ class PostForm extends Component{
 
         return(
             <div>
-                <form onSubmit={this.submitHandler} className='form' >
+                <form onSubmit={this.submitHandler} className='form'  >
+                    {this.state.screenTwo &&      <Redirect to="/second" />}
                     <div>
                         <input type='email' 
                         name='email' 

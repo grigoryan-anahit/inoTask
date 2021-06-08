@@ -2,6 +2,7 @@
 import React from 'react';
 import s from './screenTwo.module.css';
 import axios from 'axios';
+import {Redirect} from "react-router-dom";
 
 class ScreenTwo extends React.Component{
     constructor(props){
@@ -9,7 +10,8 @@ class ScreenTwo extends React.Component{
          this.state={
          token:JSON.parse(localStorage.getItem('response')).message,
          channelList:[],
-         urlImg:''
+         urlImg:'',
+         third:false
   }
 }
  
@@ -37,7 +39,8 @@ class ScreenTwo extends React.Component{
                 const url=localStorage.setItem('urls',JSON.stringify(lc[i].url));
                 this.setState(prevState=>({
                     ...prevState,
-                   urlImg:url
+                   urlImg:url,
+                   third:true
                 }))
             }
         }
@@ -50,6 +53,7 @@ class ScreenTwo extends React.Component{
            channelListJsx=message.map(item=>{
                return (
                    <div key={item.id} className={s.channelDiv} onClick={this.handleClick} data-id='5'>
+                       {this.state.third && <Redirect to="/third" />}
                        <img src={item.image} alt='chanelImage' />
                        <p>{item.name}</p>
                    </div>
